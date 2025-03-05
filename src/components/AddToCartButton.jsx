@@ -4,9 +4,7 @@ import CartContext from "../contexts/CartContext";
 const AddToCartButton = () => {
   const { cantidadTotal, setCantidadTotal } = useContext(CartContext);
 
-  const aumentarCantidadTotal = () => {
-    // Aquí puedes implementar la lógica para aumentar la cantidad total del carrito.
-    // Por ejemplo, puedes aumentarla en 1 cada vez que se hace clic en este botón.
+  const aumentarCantidadTotal = () => {    
     setCantidadTotal(cantidadTotal + 1);
   };
 

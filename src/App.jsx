@@ -5,10 +5,13 @@ import ItemListContainer from "./components/ItemListContainer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Productos from "./components/Productos";
+import DetalleProducto from "./pages/DetalleProducto";
+import { CartProvider } from "./contexts/CartContext";
 
 function App() {
   const [cartCount, setCartCount] = useState(0); 
   return (
+    <CartProvider>
     <Router>
       <Navbar cartCount={cartCount} />
       <Routes>        
@@ -17,8 +20,10 @@ function App() {
         <Route path="/about" element={<About />} />        
         <Route path="/productos" element={<Productos />} />
         <Route path="/productos/:categoria" element={<Productos />} /> 
+        <Route path="/DetalleProducto/:productid" element={<DetalleProducto />} />
       </Routes>
     </Router>
+    </CartProvider>
   );
 }
 

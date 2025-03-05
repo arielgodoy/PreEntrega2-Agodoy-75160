@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"; // Importa useParams desde react-router-dom
 import { useEffect, useState } from "react";
+import LeeProducto from "./Getdata/LeeProducto";
 
 const Productos = () => {
   const [productos, setProductos] = useState([]);
@@ -45,18 +46,7 @@ const Productos = () => {
     <div className="container mt-4">
       <h2>Productos de FakeStore</h2>
       <div className="row">
-        {productos.map((producto) => (
-          <div key={producto.id} className="col-md-4">
-            <div className="card mb-3">
-              <img src={producto.image} alt={producto.title} className="card-img-top" style={{ height: "250px", objectFit: "contain" }} />
-              <div className="card-body">
-                <h5 className="card-title">{producto.title}</h5>
-                <p className="card-text">{producto.description.substring(0, 100)}...</p>
-                <p className="card-text"><strong>Precio: ${producto.price}</strong></p>
-              </div>
-            </div>
-          </div>
-        ))}
+        {productos.map((prod) => <LeeProducto producto={prod} key={prod.id} /> )}
       </div>
     </div>
   );

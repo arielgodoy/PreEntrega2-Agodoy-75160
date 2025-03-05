@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"; // Importa useParams desde react-router-dom
+import { useParams } from "react-router-dom"; 
 import { useEffect, useState } from "react";
 import LeeProducto from "./Getdata/LeeProducto";
 

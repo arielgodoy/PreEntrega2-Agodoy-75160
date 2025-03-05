@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import Categories from "./Categories";
-import "./Navbar.css";
-import logo from "./pokeball.png";
+import logo from "../assets/pokeball.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min"; // 🔥 Importa Bootstrap JS
 

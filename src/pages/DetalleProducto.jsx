@@ -21,7 +21,16 @@ const DetalleProducto = () => {
       });
   }, [productid]);
 
-  if (!detail) return <>Cargando...</>;
+  
+
+  if (!detail)
+    return (
+      <div className="d-flex justify-content-center mt-5">
+        <div className="spinner-border text-primary" role="status" style={{ width: "5rem", height: "5rem", borderWidth: "5px" }}>
+          <span className="visually-hidden">Cargando...</span>
+        </div>
+      </div>
+    );
 
   return (
     <>
